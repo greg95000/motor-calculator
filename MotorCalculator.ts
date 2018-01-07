@@ -75,7 +75,7 @@ class MotorCalculator {
       this._wheelSpeed = 0;
       return;
     }
-    this._wheelSpeed = (this.maxSpeed * 60) / (this.wheelDiameter * Math.PI);
+    this._wheelSpeed = Math.round((this.maxSpeed * 60) / (this.wheelDiameter * Math.PI));
   }
 
   private calculateMotorSpeed() {
@@ -83,8 +83,8 @@ class MotorCalculator {
       this._motorSpeed = 0;
       return;
     }
-    this._motorSpeed = (this.speedReducingRatio * this.maxSpeed * 60) /
-     (this.wheelDiameter * Math.PI);
+    this._motorSpeed = Math.round((this.speedReducingRatio * this.maxSpeed * 60) /
+     (this.wheelDiameter * Math.PI));
   }
 
   private calculateProjectionForce() {

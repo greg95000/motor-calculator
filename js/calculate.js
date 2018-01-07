@@ -16,12 +16,14 @@
   motorCalculator.calculateDimensions();
   $("#motor-couple").val(motorCalculator.getMotorCouple());
   $("#power").val(motorCalculator.getPower());
+  $("#motor-rpm").val(motorCalculator.getMotorSpeed());
   $(`#wheel-number`)
     .on("change", function () {
       motorCalculator.wheelNumber = $(this).val();
       motorCalculator.calculateDimensions();
       $("#motor-couple").val(motorCalculator.getMotorCouple());
       $("#power").val(motorCalculator.getPower());
+      $("#motor-rpm").val(motorCalculator.getMotorSpeed());
   });
 
   $(`#weight`)
@@ -30,6 +32,7 @@
       motorCalculator.calculateDimensions();
       $("#motor-couple").val(motorCalculator.getMotorCouple());
       $("#power").val(motorCalculator.getPower());
+      $("#motor-rpm").val(motorCalculator.getMotorSpeed());
   });
 
   $(`#max-speed`)
@@ -38,6 +41,7 @@
       motorCalculator.calculateDimensions();
       $("#motor-couple").val(motorCalculator.getMotorCouple());
       $("#power").val(motorCalculator.getPower());
+      $("#motor-rpm").val(motorCalculator.getMotorSpeed());
   });
 
   $(`#max-angle`)
@@ -46,6 +50,7 @@
       motorCalculator.calculateDimensions();
       $("#motor-couple").val(motorCalculator.getMotorCouple());
       $("#power").val(motorCalculator.getPower());
+      $("#motor-rpm").val(motorCalculator.getMotorSpeed());
   });
 
   $(`#speed-reducing-ratio`)
@@ -54,6 +59,7 @@
       motorCalculator.calculateDimensions();
       $("#motor-couple").val(motorCalculator.getMotorCouple());
       $("#power").val(motorCalculator.getPower());
+      $("#motor-rpm").val(motorCalculator.getMotorSpeed());
   });
 
   $(`#max-acceleration`)
@@ -62,6 +68,7 @@
       motorCalculator.calculateDimensions();
       $("#motor-couple").val(motorCalculator.getMotorCouple());
       $("#power").val(motorCalculator.getPower());
+      $("#motor-rpm").val(motorCalculator.getMotorSpeed());
   });
 
   $(`#wheel-diameter`)
@@ -70,5 +77,6 @@
       motorCalculator.calculateDimensions();
       $("#motor-couple").val(motorCalculator.getMotorCouple());
       $("#power").val(motorCalculator.getPower());
+      $("#motor-rpm").val(motorCalculator.getMotorSpeed());
   });
 })();

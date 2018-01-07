@@ -59,15 +59,15 @@ var MotorCalculator = /** @class */ (function () {
             this._wheelSpeed = 0;
             return;
         }
-        this._wheelSpeed = (this.maxSpeed * 60) / (this.wheelDiameter * Math.PI);
+        this._wheelSpeed = Math.round((this.maxSpeed * 60) / (this.wheelDiameter * Math.PI));
     };
     MotorCalculator.prototype.calculateMotorSpeed = function () {
         if (this.wheelDiameter == 0) {
             this._motorSpeed = 0;
             return;
         }
-        this._motorSpeed = (this.speedReducingRatio * this.maxSpeed * 60) /
-            (this.wheelDiameter * Math.PI);
+        this._motorSpeed = Math.round((this.speedReducingRatio * this.maxSpeed * 60) /
+            (this.wheelDiameter * Math.PI));
     };
     MotorCalculator.prototype.calculateProjectionForce = function () {
         this._projectionForce = this.weight * this.GRAVITY * Math.sin(this.maxAngle * (Math.PI / 180));
